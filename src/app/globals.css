@@ -1,0 +1,158 @@
+.demoCustomCheckbox {
+    display: none;
+}
+.demoCustomCheckbox + label {
+    position: relative;
+    padding-left: 30px;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    color: #808080;
+    cursor: pointer;
+    user-select: none;
+}
+
+.demoCustomCheckbox + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid #ccc;
+    border-radius: 100%
+}
+
+.demoCustomCheckbox:checked + label::before {
+    border-color: hwb(125 0% 29%);
+    background-image: url('https://avatars.mds.yandex.net/i?id=9553e8506600302748ceab537d543c5b420198c6-10780278-images-thumbs&n=13');
+    background-size: contain;
+}
+
+/* Наведение */
+.demoCustomCheckbox:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #00b50e;
+}
+
+/* Фокус */
+.demoCustomCheckbox:focus + label::before {
+    box-shadow: 0 0 3px 3px rgba(0, 215, 6, 0.4);
+
+}
+
+/* Момент нажатия */
+.demoCustomCheckbox:not(:disabled) + label:active::before {
+    border-color: #aaa
+}
+
+/* Деактивирован */
+.demoCustomCheckbox:disabled + label {
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.demoCustomCheckbox:disabled + label::before {
+    border-color: #ccc;
+}
+
+.demoCustomCheckbox:disabled:checked + label::before {
+    background-image: url('https://avatars.mds.yandex.net/i?id=9553e8506600302748ceab537d543c5b420198c6-10780278-images-thumbs&n=13');
+}
+
+.block{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f0f0f0;
+    max-width: 500px;
+    padding-bottom: 20px;
+}
+
+.header{
+    text-align: center;
+    font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #9a763c, #d3ca93);
+  color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.input-wrapper { 
+    position: relative; 
+    display: inline-block; 
+    display: flex;
+} 
+
+.input-wrapper input { 
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    border: 1px solid #aaa;
+    background-color: #ffffff;
+} 
+
+.input-wrapper button { 
+    position: absolute; 
+    top: 4px; 
+    left: 0; 
+    border: none; 
+    background-color: transparent; 
+    cursor: pointer; 
+}
+
+.todo-blocks{
+    border: 1px solid #aaa;
+    border-top: none;
+    background-color: #ffffff;
+    display: flex;
+    padding: 10px 20px;
+    color: #ccc;
+}
+
+.button-block{
+    display: flex;
+    flex-direction: row;
+    border-top: none;
+    border: 1px solid #aaa;
+    background-color: #f3f3f3;
+    flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.button-check{
+    border: none;
+    outline: none ;
+    background-color: transparent;
+    color: #aaa;
+    font-size: 10px;
+  font-weight: 400;
+}
+
+.count{
+    color: #aaa;
+    font-size: 10px;
+  font-weight: 400;
+}
+
+.flex-buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-spechial:hover{
+border: 1px solid #9a763c;
+}
+.buttons-spechial:focus{
+    border: 1px solid #9a763c;
+    }
+    .buttons-spechial:active{
+        border: 1px solid #9a763c;
+        }
